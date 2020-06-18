@@ -138,6 +138,13 @@ void MainWindow::MainLoop(void){
         // Get elapsed time to last cycle
         double time = glfwGetTime();
         double dt = time - previousTime;
+
+        // Limit FPS
+        if(dt < 0.01){
+            std::this_thread::sleep_for(std::chrono::microseconds((int)((0.01 - dt)*1e6)));
+            time = glfwGetTime();
+            dt = time - previousTime;
+        }
         previousTime = time;
 
         // Rendering + swap buffers
