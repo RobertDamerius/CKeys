@@ -36,7 +36,7 @@
 #endif /* __WIN32__ */
 
 /* OpenGL and utilities */
-#include <glad/glad.h>
+#include <GL/glew.h>
 #ifdef __WIN32__
 #define GLFW_EXPOSE_NATIVE_WGL
 #define GLFW_EXPOSE_NATIVE_WIN32
@@ -57,7 +57,7 @@
 #include <portaudio.h>
 
 /* RT-MIDI */
-#include <rtmidi/RtMidi.h>
+#include <RtMidi.h>
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

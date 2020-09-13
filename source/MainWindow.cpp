@@ -63,17 +63,12 @@ bool MainWindow::Initialize(void){
         glfwSetScrollCallback(glfwWindow, MainWindow::CallbackScroll);
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    // Initiate GLEW or GLAD
+    // Initiate GLEW
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // glewExperimental = GL_TRUE;
-        // if(GLEW_OK != glewInit()){
-            // LogError("Could not initialize GLEW!\n");
-            // MainWindow::Terminate();
-            // return false;
-        // }
-        if(!gladLoadGL()) {
-            LogError("Could not initialize GLAD!\n");
-            Terminate();
+        glewExperimental = GL_TRUE;
+        if(GLEW_OK != glewInit()){
+            LogError("Could not initialize GLEW!\n");
+            MainWindow::Terminate();
             return false;
         }
 

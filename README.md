@@ -17,7 +17,7 @@ The directory structure of this repository is as follows.
 
 
 > **Windows**<br>
-> On Windows you can either download the latest binary file from [Google Drive](https://drive.google.com/uc?id=1im_wuQDOwfv-SIeR4pXIEYTOwVlF5qeV&export=download) or build the software from the source code yourself using [MSYS2/MinGW](https://www.msys2.org).
+> On Windows you can either download the latest binary file from [Google Drive](https://drive.google.com/uc?id=1fcjcYoLgGs-hPy8GWhKeTtSCbGQijyhH&export=download) or build the software from the source code yourself using [MSYS2/MinGW64](https://www.msys2.org).
 
 > **Linux**<br>
 > On Linux you can build the software yourself.
@@ -86,15 +86,15 @@ Because GitHub limits the file size to 100 MB, the SoundFont is split into two p
 All other required external libraries are shown in the following table.
 
 
-| Library                                      | Comment                                                                                                                                       |
-| :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
-| [GLFW3](https://github.com/glfw/glfw)        | used to create window and OpenGL-context                                                                                                      |
-| [GLAD](https://github.com/Dav1dde/glad)      | OpenGL loading library                                                                                                                        |
-| [GLM](https://github.com/g-truc/glm)         | OpenGL mathematics                                                                                                                            |
-| [Freetype](https://www.freetype.org)         | required by NanoVG, NanoGUI to use fonts                                                                                                      |
-| [Eigen3](https://gitlab.com/libeigen/eigen)  | required by NanoGUI (on linux you can install it with `sudo apt install libeigen3-dev`)                                                       |
-| [PortAudio](http://www.portaudio.com)        | required for playing audio streams (on linux install asound library first: `sudo apt install libasound-dev`)                                  |
-| [RtMidi](https://github.com/thestk/rtmidi)   | required for data acquisition from MIDI devices (on linux you can install it with `sudo apt install librtmidi-dev librtaudio-dev librtmidi4`) |
+| Library                                      | Windows (MSYS2/MinGW64)                               | Linux                                                   | Comment                                          |
+| :------------------------------------------- | :---------------------------------------------------- | :------------------------------------------------------ | :----------------------------------------------- |
+| [GLFW3](https://github.com/glfw/glfw)        | `pacman -S mingw-w64-x86_64-glfw`                     | `sudo apt install libglfw3-dev`                         | used to create window and OpenGL-context         |
+| [GLEW](http://glew.sourceforge.net)          | build from [source](http://glew.sourceforge.net)      | `sudo apt install libglew-dev`                          | OpenGL extension wrangler library                |
+| [GLM](https://github.com/g-truc/glm)         | `pacman -S mingw-w64-x86_64-glm`                      | `sudo apt install libglm-dev`                           | OpenGL mathematics                               |
+| [Freetype](https://www.freetype.org)         | build from [source](https://www.freetype.org)         | `sudo apt install libfreetype6-dev`                     | required by NanoVG, NanoGUI to use fonts         |
+| [Eigen3](https://gitlab.com/libeigen/eigen)  | `pacman -S mingw-w64-x86_64-eigen3`                   | `sudo apt install libeigen3-dev`                        | required by NanoGUI                              |
+| [PortAudio](http://www.portaudio.com)        | `pacman -S mingw-w64-x86_64-portaudio`                | `sudo apt install libasound-dev libportaudio-ocaml-dev` | required for playing audio streams               |
+| [RtMidi](https://github.com/thestk/rtmidi)   | build from [source](https://github.com/thestk/rtmidi) | build from [source](https://github.com/thestk/rtmidi)   | required for data acquisition from MIDI devices  |
 
 ### Build procedure
 The Makefile is designed to work with the default GNU compiler (GCC) under Linux and the MinGW toolchain under Windows.
