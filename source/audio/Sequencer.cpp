@@ -135,6 +135,11 @@ void Sequencer::Generate(double tempoScale){
                             track.lanes[key].back().sustainOff = timeScale * GetTimestampOfNextPedalOff(me.absoluteTicks, track.sustainPedalChanges);
                         }
                     }
+                    // Remove possible missing or too large note off events from previous notes
+                    int32_t N = (int32_t)track.lanes[key].size();
+                    for(int32_t n = N - 1; n >= 0; --n){
+                        track.lanes[key][n].off = std::min(track.lanes[key][n].off, timeOff);
+                    }
                 }
             }
             else if((0x80 == (0xF0 & me.status)) && (2 == me.data.size())){ // Note Off
@@ -149,6 +154,11 @@ void Sequencer::Generate(double tempoScale){
                     if(GetPedalState(me.absoluteTicks, track.sustainPedalChanges)){
                         track.lanes[key].back().sustainOff = timeScale * GetTimestampOfNextPedalOff(me.absoluteTicks, track.sustainPedalChanges);
                     }
+                }
+                // Remove possible missing or too large note off events from previous notes
+                int32_t N = (int32_t)track.lanes[key].size();
+                for(int32_t n = N - 1; n >= 0; --n){
+                    track.lanes[key][n].off = std::min(track.lanes[key][n].off, timeOff);
                 }
             }
         }

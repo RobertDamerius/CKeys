@@ -17,7 +17,7 @@ The directory structure of this repository is as follows.
 
 
 > **Windows**<br>
-> On Windows you can either download the latest binary file from [Google Drive](https://drive.google.com/uc?id=1fcjcYoLgGs-hPy8GWhKeTtSCbGQijyhH&export=download) or build the software from the source code yourself using [MSYS2/MinGW64](https://www.msys2.org).
+> On Windows you can either download the latest binary file from [Google Drive](https://drive.google.com/drive/folders/1hHQuc2BRq-ZI48p72_fX2NxdtPCdWu19?usp=sharing) or build the software from the source code yourself using [MSYS2/MinGW64](https://www.msys2.org).
 
 > **Linux**<br>
 > On Linux you can build the software yourself.
@@ -26,9 +26,10 @@ The directory structure of this repository is as follows.
 > On other operating systems, you must build the software yourself. If you use a GNU compiler and the GNU make tool, you may be able to use the same Makefile with a few adjustments.
 
 ### Revision History
-| Date        | Version  | Description                           |
-| :---------- | :------- | :------------------------------------ |
-| 2020-06-10  | 1.0      | Initial release                       |
+| Date        | Version  | Description                                         |
+| :---------- | :------- | :-------------------------------------------------- |
+| 2020-06-10  | 1.0      | Initial release                                     |
+| 2020-09-27  | 1.1      | Improved visualization for missing note off events  |
 
 ![](documentation/Performance.png)
 
