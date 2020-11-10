@@ -89,6 +89,7 @@ All other required external libraries are shown in the following table.
 
 | Library                                      | Windows (MSYS2/MinGW64)                               | Linux                                                   | Comment                                          |
 | :------------------------------------------- | :---------------------------------------------------- | :------------------------------------------------------ | :----------------------------------------------- |
+| OpenGL                                       | already comes with MSYS2/MinGW64                      | `sudo apt install build-essential libgl1-mesa-dev`      | OpenGL                                           |
 | [GLFW3](https://github.com/glfw/glfw)        | `pacman -S mingw-w64-x86_64-glfw`                     | `sudo apt install libglfw3-dev`                         | used to create window and OpenGL-context         |
 | [GLEW](http://glew.sourceforge.net)          | build from [source](http://glew.sourceforge.net)      | `sudo apt install libglew-dev`                          | OpenGL extension wrangler library                |
 | [GLM](https://github.com/g-truc/glm)         | `pacman -S mingw-w64-x86_64-glm`                      | `sudo apt install libglm-dev`                           | OpenGL mathematics                               |
