@@ -26,21 +26,21 @@
 
 /* Os Specific */
 // Windows System
-#ifdef __WIN32__
+#ifdef _WIN32
 // Unix System
 #else
 #include <stdarg.h>
 #include <sys/types.h>
 #include <dirent.h>
 #include <unistd.h>
-#endif /* __WIN32__ */
+#endif /* _WIN32 */
 
 /* OpenGL and utilities */
 #include <GL/glew.h>
-#ifdef __WIN32__
+#ifdef _WIN32
 #define GLFW_EXPOSE_NATIVE_WGL
 #define GLFW_EXPOSE_NATIVE_WIN32
-#endif /* __WIN32__ */
+#endif /* _WIN32 */
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
 #include <glm/glm.hpp>
@@ -102,7 +102,7 @@
   extern const unsigned char _section$__DATA__ ## NAME [];
 #define RESOURCE_LDVAR(NAME) _section$__DATA__ ## NAME
 #define RESOURCE_LDLEN(NAME) (getsectbyname("__DATA", "__" #NAME)->size)
-#elif (defined __WIN32__)  /* mingw32 & mingw64 */
+#elif (defined _WIN32)  /* mingw32 & mingw64 */
 #ifdef __MINGW64__
 #define RESOURCE_EXTLD(NAME) \
   extern const unsigned char _binary_ ## NAME ## _start[]; \

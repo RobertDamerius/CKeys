@@ -22,7 +22,7 @@
   extern const unsigned char _section$__DATA__ ## NAME [];
 #define GUI_RESOURCE_LDVAR(NAME) _section$__DATA__ ## NAME
 #define GUI_RESOURCE_LDLEN(NAME) (getsectbyname("__DATA", "__" #NAME)->size)
-#elif (defined __WIN32__)  /* mingw32 & mingw64 */
+#elif (defined _WIN32)  /* mingw32 & mingw64 */
 #ifdef __MINGW64__
 #define GUI_RESOURCE_EXTLD(NAME) \
   extern const unsigned char _binary_ ## NAME ## _start[]; \

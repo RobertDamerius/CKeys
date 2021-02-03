@@ -112,8 +112,9 @@ DIRECTORY_ALL := $(dir $(call rwildcard,$(DIRECTORY_SOURCE),.))
 
 # Add header directories and library directories to related paths
 INCLUDE_PATH_SYS := -I/usr/include/freetype2 -I/usr/include -I/usr/local/include
+LIBRARY_PATH_SYS := -L/usr/lib -L/usr/local/lib
 INCLUDE_PATHS += $(INCLUDE_PATH_SYS) $(addprefix -I,$(DIRECTORY_ALL)) $(addprefix -I,$(DIRECTORY_PCH)) $(addprefix -include ,$(notdir $(PCH_H))) $(addprefix -include ,$(notdir $(PCH_HPP)))
-LIBRARY_PATHS += -L/usr/lib -L/usr/local/lib $(addprefix -L,$(DIRECTORY_ALL))
+LIBRARY_PATHS += $(LIBRARY_PATH_SYS) $(addprefix -L,$(DIRECTORY_ALL))
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -145,7 +145,7 @@ bool Recorder::Save(void){
 
     // Directory of application
     char* buffer = new char[65536];
-    #ifdef __WIN32__
+    #ifdef _WIN32
     DWORD len = GetModuleFileName(NULL, (LPSTR)(&buffer[0]), (DWORD)65536);
     #else
     ssize_t len = readlink("/proc/self/exe", &buffer[0], 65536);
