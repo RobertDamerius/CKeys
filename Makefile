@@ -36,9 +36,9 @@ CC_SYMBOLS         = -DGLEW_STATIC
 # Flags
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Build Flags
-CC_FLAGS        = -Wall -Wextra -Ofast
-CPP_FLAGS       = -std=c++17 -Wall -Wextra -Ofast
-LD_FLAGS        = -Wall -Wextra -Ofast
+CC_FLAGS        = -Wall -Wextra -O3
+CPP_FLAGS       = -std=c++17 -Wall -Wextra -O3
+LD_FLAGS        = -Wall -Wextra -O3
 DEP_FLAGS       = -MT $@ -MMD -MP -MF $(DIRECTORY_BUILD)$*.Td
 POSTCOMPILE     = mv -f $(DIRECTORY_BUILD)$*.Td $(DIRECTORY_BUILD)$*.d
 
