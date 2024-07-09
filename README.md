@@ -72,15 +72,13 @@ Currently, the acoustic grand piano is set as the default instrument when saving
 
 
 ## How To Build
-At the moment I have less time to deal with build tools like CMake or Automake.
-Maybe somebody has time and wants to help me.
 At the moment you need the GNU make tool and a GNU compiler that supports the C++17 standard.
 If your header files for required libraries are in a different location than mine, you can change this in `/source/precompiled/Common.hpp`.
 If the corresponding libraries to be linked against are named differently, you can change this in the `Makefile` on line 30 (Windows) or 31 (Linux).
 
 ### External libraries required
 Some third-party source code files are already present in the source directory. These include
-[NanoVG](https://github.com/memononen/nanovg), [NanoGUI](https://github.com/wjakob/nanogui) and [TinySoundFount](https://github.com/schellingb/TinySoundFont).
+[NanoVG](https://github.com/memononen/nanovg), [NanoGUI](https://github.com/wjakob/nanogui), [TinySoundFount](https://github.com/schellingb/TinySoundFont) and [rtmidi](https://github.com/thestk/rtmidi).
 Currently NanoVG is used for graphical rendering and TinySoundFont for sound rendering.
 The current SoundFont is located as a binary file in the directory `/source/thirdparty/TinySoundFont` and is integrated into the application during a build.
 Because GitHub limits the file size to 100 MB, the SoundFont is split into two parts.
@@ -96,7 +94,7 @@ All other required external libraries are shown in the following table.
 | [Freetype](https://www.freetype.org)         | build from [source](https://www.freetype.org)         | `sudo apt install libfreetype6-dev`                     | required by NanoVG, NanoGUI to use fonts         |
 | [Eigen3](https://gitlab.com/libeigen/eigen)  | `pacman -S mingw-w64-x86_64-eigen3`                   | `sudo apt install libeigen3-dev`                        | required by NanoGUI                              |
 | [PortAudio](http://www.portaudio.com)        | `pacman -S mingw-w64-x86_64-portaudio`                | `sudo apt install libasound-dev libportaudio-ocaml-dev` | required for playing audio streams               |
-| [RtMidi](https://github.com/thestk/rtmidi)   | build from [source](https://github.com/thestk/rtmidi) | build from [source](https://github.com/thestk/rtmidi)   | required for data acquisition from MIDI devices  |
+
 
 ### Build procedure
 The Makefile is designed to work with the default GNU compiler (GCC) under Linux and the MinGW toolchain under Windows.

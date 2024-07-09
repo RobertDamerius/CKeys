@@ -27,8 +27,8 @@ DIRECTORY_PCH     := source/precompiled/
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Libraries and symbols
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-LIBS_WINDOWS      := -lstdc++ -lpthread -lfreetype -lglfw3 -lglew32 -lopengl32 -lgdi32 -lcomdlg32 -lportaudio -lrtmidi -lwinmm -lsetupapi -lole32
-LIBS_LINUX        := -lstdc++ -lpthread -lfreetype -lglfw -lGLEW -lGL -lX11 -ldl -lportaudio -lrtmidi -lasound -ljack
+LIBS_WINDOWS      := -lstdc++ -lpthread -lfreetype -lglfw3 -lglew32 -lopengl32 -lgdi32 -lcomdlg32 -lportaudio -lwinmm -lsetupapi -lole32
+LIBS_LINUX        := -lstdc++ -lpthread -lfreetype -lglfw -lGLEW -lGL -lX11 -ldl -lportaudio -lasound -ljack
 CC_SYMBOLS         = -DGLEW_STATIC
 
 

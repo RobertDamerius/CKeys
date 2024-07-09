@@ -2,6 +2,7 @@
 
 
 #include <SequenceTrack.hpp>
+#include <RtMidi.h>
 
 
 class Recorder {

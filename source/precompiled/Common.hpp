@@ -8,6 +8,7 @@
 /* Default C++ includes */
 #include <cstdint>
 #include <iostream>
+#include <iterator>
 #include <fstream>
 #include <cstdio>
 #include <cmath>
@@ -57,7 +58,7 @@
 #include <portaudio.h>
 
 /* RT-MIDI */
-#include <RtMidi.h>
+// #include <RtMidi.h>
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
