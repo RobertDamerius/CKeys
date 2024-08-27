@@ -57,9 +57,12 @@ ifeq ($(OS), Windows_NT)
     ifeq ($(DISABLE_CONSOLE), 1)
         LD_FLAGS += -Wl,-subsystem,windows
     endif
+	CC_SYMBOLS += -D__WINDOWS_MM__
 else
     LD_LIBS    := $(LIBS_LINUX)
+	CC_SYMBOLS += -D__LINUX_ALSA__
 endif
+# Linux: try "-D__UNIX_JACK__" if "-D__LINUX_ALSA__" does not work
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
